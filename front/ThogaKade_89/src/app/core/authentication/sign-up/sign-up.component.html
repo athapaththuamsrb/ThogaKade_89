@@ -1,0 +1,31 @@
+<div class="main-wrap">
+  <div class="inner-wrap">
+
+    <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+      <mat-form-field class="example-full-width">
+        <mat-label>User Name</mat-label>
+        <input formControlName="userName" type="text" matInput placeholder="Ex. Samantha">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Contact</mat-label>
+        <input formControlName="contact" type="tel" matInput>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" type="email" matInput placeholder="Ex. pat@example.com">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" type="password" matInput>
+      </mat-form-field>
+
+      <button class="btn btn-primary btn-sm" type="submit">
+        Sign Up
+      </button>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="main-wrap">
+
+  <div class="main-wrap">
+
+    <form [formGroup]="searchCustomerForm" (ngSubmit)="searchData()">
+
+      <div class="col-3">
+        <mat-form-field class="example-full-width">
+          <mat-label>Customer Id</mat-label>
+          <input formControlName="id" matInput type="text" placeholder="Ex. C001">
+        </mat-form-field>
+      </div>
+
+      <button [disabled]="searchCustomerForm.invalid" type="submit" mat-button mat-raised-button color="primary">
+        Search Customer
+      </button>
+    </form>
+  </div>
+
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Customer Id</th>
+      <th>Customer Name</th>
+      <th>Customer Salary</th>
+      <th>Customer Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{selectedCustomer?.id}}</td>
+      <td>{{selectedCustomer?.name}}</td>
+      <td>{{selectedCustomer?.address}}</td>
+      <td>{{selectedCustomer?.salary}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+

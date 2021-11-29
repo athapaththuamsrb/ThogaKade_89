@@ -1,0 +1,19 @@
+.bottom{
+  height: 50px;
+  display: flex;
+}
+.left-side, .right-side{
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  span{
+    color: red;
+    font-weight: bold;
+  }
+
+}
+.right-side{
+  justify-content: flex-end;
+}

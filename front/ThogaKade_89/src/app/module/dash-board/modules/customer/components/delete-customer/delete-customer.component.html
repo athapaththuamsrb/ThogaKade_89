@@ -1,0 +1,15 @@
+<div class="main-wrap">
+
+  <form [formGroup]="deleteCustomerForm" (ngSubmit)="deleteData()">
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Customer Id</mat-label>
+        <input formControlName="id" matInput type="text" placeholder="Ex. C001">
+      </mat-form-field>
+    </div>
+    <button [disabled]="deleteCustomerForm.invalid" type="submit" mat-button mat-raised-button color="primary">
+      delete Customer
+    </button>
+  </form>
+</div>

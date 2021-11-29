@@ -1,0 +1,26 @@
+<div class="main-wrap">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Customer Id</th>
+      <th>Customer Name</th>
+      <th>Customer Salary</th>
+      <th>Customer Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempCustomer of customers; index as num">
+      <td>{{tempCustomer.id}}</td>
+      <td>{{tempCustomer.name}}</td>
+      <td>{{tempCustomer.address}}</td>
+      <td>{{tempCustomer.salary}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+<mat-paginator [length]="100"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               aria-label="Select page">
+</mat-paginator>

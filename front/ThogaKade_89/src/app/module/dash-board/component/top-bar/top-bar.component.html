@@ -1,0 +1,61 @@
+
+
+<div class="main-wrap">
+  <div class="name-wrap">
+    <h2>ThogaKade</h2>
+  </div>
+
+  <div class="ham-wrap" (click)="sliderState=!sliderState">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="logged-user-wrap">
+    <div class="user-wrap">
+      <h4>John Doe</h4>
+    </div>
+    <div class="avatar-wrap">
+      <img src="https://cylonlisting.com/wp-content/uploads/2017/03/default-user.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="slide" *ngIf="sliderState" [@slider]>
+
+    <div class="slide-top">
+
+      <h2 class="user-name">
+        John Doe
+      </h2>
+      <h4 class="user-email">
+        johndoe@withinpixels.com
+      </h4>
+
+      <div class="slider-avatar-wrap">
+        <img src="https://cylonlisting.com/wp-content/uploads/2017/03/default-user.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="slide-bottom">
+
+      <ul>
+        <li routerLink="/dashboard/customer" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Customer</span>
+        </li>
+        <li routerLink="/dashboard/item" routerLinkActive="active"  (click)="sliderState=!sliderState">
+          <span>Item</span>
+        </li>
+        <li routerLink="/dashboard/orders" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Orders</span>
+        </li>
+        <li routerLink="/dashboard/place-order" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Place Order</span>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+</div>

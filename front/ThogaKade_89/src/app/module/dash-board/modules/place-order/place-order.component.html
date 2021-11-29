@@ -1,0 +1,81 @@
+<div class="container">
+  <br>
+  <br>
+  <p class="alert alert-dark">Customer Detail</p>
+  <div class="row">
+    <div class="col-1">
+      <select class="form-control" #element (change)="selectCustomer(element.value)">
+        <option *ngFor="let tempCustomer of customers" value="{{tempCustomer.id}}">{{tempCustomer.id}}</option>
+      </select>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" disabled value="{{selectedCustomer?.name}}">
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" disabled value="{{selectedCustomer?.address}}">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" [disabled]="true" [value]="selectedCustomer?.salary">
+    </div>
+  </div>
+
+  <hr>
+  <p class="alert alert-dark">Item Detail</p>
+  <div class="row">
+    <div class="col-1">
+      <select class="form-control" #idElement (change)="selectItem(idElement.value)">
+        <option *ngFor="let tempItem of itemList" value="{{tempItem.code}}">{{tempItem.code}}</option>
+      </select>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" disabled [value]="selectedItem?.description">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" disabled [value]="selectedItem?.unitPrice">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" disabled [value]="selectedItem?.qtyOnHand">
+    </div>
+    <div class="col-1">
+      <input type="number" #element3 class="form-control" (keyup.enter)="addToCart(element3.value)">
+    </div>
+
+  </div>
+  <hr>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Item Code</th>
+      <th>Description</th>
+      <th>Unit Price</th>
+      <th>QTY</th>
+      <th>Total</th>
+      <th>Option</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempItem of cart; index as num">
+      <td>{{tempItem.itemCode}}</td>
+      <td>{{tempItem.description}}</td>
+      <td>{{tempItem.unitPrice}}</td>
+      <td>{{tempItem.qty}}</td>
+      <td>{{tempItem.total}}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deleteFromCart(num)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+
+  <div class="bottom">
+    <div class="left-side">
+      <span>Total : {{totalCost}} LKR</span>
+    </div>
+    <div class="right-side">
+      <button class="btn btn-primary btn-sm" (click)="placeOrder()">Place Order</button>
+    </div>
+  </div>
+
+</div>

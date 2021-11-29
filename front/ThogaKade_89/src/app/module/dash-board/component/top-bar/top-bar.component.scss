@@ -1,0 +1,158 @@
+.main-wrap{
+  width: 100%;
+  height: 50px;
+  background-color: #3498db;
+}
+.name-wrap{
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2980b9;
+
+  h2{
+    font-family: 'Rampart One', cursive;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+.ham-wrap{
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  position: absolute;
+  left: 300px;
+  top: 0;
+  padding: 12px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.ham-wrap:hover{
+  background-color: #16a085;
+  cursor: pointer;
+}
+.line{
+  height: 3px;
+  width: 90%;
+  background-color: white;
+  border-top-right-radius: 5px;
+}
+
+.logged-user-wrap{
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  padding: 0 10px;
+}
+.user-wrap{
+  flex: 1;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  h4{
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+.avatar-wrap{
+  width: 50px;
+  height: 50px;
+  background-color: #16a085;
+  border-radius: 100%;
+
+  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+
+}
+
+.slide{
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.slide-top{
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: #1B2330;
+  display: flex;justify-content: center;
+}
+.slide-bottom{
+  flex: 1;
+  background-color: #252F3E;
+}
+.slider-avatar-wrap{
+  width: 100px;
+  height: 100px;
+  background-color: #252F3E;
+  position: absolute;
+  border-radius: 100%;
+  bottom: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img{
+    width: 85%;
+    height: 85%;
+    border-radius: 100%;
+  }
+
+}
+.user-name{
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.user-email{
+  color: gray;
+  position: absolute;
+  margin-top: 50px;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 80px;
+
+  li{
+    padding: 8px 10px;
+    border-left: 5px solid transparent;
+
+    span{
+      color: white;
+    }
+
+  }
+
+  li:hover{
+    cursor: pointer;
+    background-color: #334155;
+    border-left: 5px solid #2980b9;
+  }
+
+}
+
+.active {
+  background-color: #334155;
+  border-left: 5px solid #2980b9;
+}
